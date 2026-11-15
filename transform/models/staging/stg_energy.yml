@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_energy
+    columns:
+      - name: country
+        data_tests:
+          - not_null
+      - name: year
+        data_tests:
+          - not_null
+      - name: electricity_generation
+        data_tests:
+          - not_null
