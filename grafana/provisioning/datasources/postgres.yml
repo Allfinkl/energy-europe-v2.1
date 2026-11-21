@@ -1,0 +1,14 @@
+apiVersion: 1
+datasources:
+  - name: EnergyEurope-Postgres
+    uid: energyeurope-pg
+    type: grafana-postgresql-datasource
+    url: postgres:5432
+    user: grafana_reader
+    isDefault: true
+    jsonData:
+      database: energy_europe
+      sslmode: disable
+      postgresVersion: 1500
+    secureJsonData:
+      password: ${GRAFANA_DB_PASSWORD}
